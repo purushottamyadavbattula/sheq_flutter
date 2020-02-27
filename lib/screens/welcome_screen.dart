@@ -18,10 +18,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
     super.initState();
 
     controller = AnimationController(
-      duration: Duration(seconds: 1),
+      duration: Duration(seconds: 5),
       vsync: this,
     );
-    animation = ColorTween(begin: kdarkBeige, end: Colors.white).animate(controller);
+    animation = ColorTween(begin: Colors.indigo, end: Colors.yellow).animate(controller);
     controller.forward();
     controller.addListener((){
       setState(() {});
@@ -36,25 +36,16 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: SafeArea(
-            child: Container(
-              decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                    colors: [klightBeige, kdarkBeige],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,)
-              ),
-              child: Center(
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 200,),
-                    Image.asset('images/SHEQ_gold_ID.png')
-                  ],
-                ),
-              ),
-            )
-        )
-    );
+    return Scaffold(
+      body: Container(
+        decoration: BoxDecoration(
+          image:  DecorationImage(
+            image: AssetImage('images/SHEQ_gold_ID.png'),
+            fit: BoxFit.fitWidth,
+              )
+          ),
+        ),
+      );
   }
 }
+
