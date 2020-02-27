@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "129991735756",
+    "firebase_url": "https://sheq-f505b.firebaseio.com",
+    "project_id": "sheq-f505b",
+    "storage_bucket": "sheq-f505b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:129991735756:android:97e64d0704b28d03684569",
+        "android_client_info": {
+          "package_name": "com.itsencrypted.sheq_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "129991735756-e5r3juutuj6i0njnt2normu1239jmhtv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDzV-Bj_SOJuLCdCSSCRoqWva5yi1-_EhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "129991735756-e5r3juutuj6i0njnt2normu1239jmhtv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
