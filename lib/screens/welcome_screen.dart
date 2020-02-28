@@ -44,7 +44,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> with SingleTickerProvider
             fit: BoxFit.fitWidth,
               )
           ),
-        ),
+       ),
+      //TODO: Add button to go to MainMenuScreen(),
+      //{
+      //Navigator.pushNamed(context, MainMenuScreen.id);}
       );
   }
 }
