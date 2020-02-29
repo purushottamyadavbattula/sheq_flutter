@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:sheq_flutter/constants.dart';
-
 
 class WelcomeScreen extends StatefulWidget {
   static const String id = 'welcome_screen';
