@@ -36,15 +36,41 @@ class MainMenuScreen extends StatelessWidget {
             Column(children: <Widget>[
               Icon(Icons.swap_horizontal_circle),
               Text('Exchange'),
-            ],),
+            ],
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: (){},
-        backgroundColor: Colors.deepPurple.shade200,
-        child: Icon(Icons.fingerprint),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.purple,
+        items: const <BottomNavigationBarItem> [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.accessibility_new),
+            title: Text('Friends'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.touch_app),
+            title: Text('Invest'),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart),
+            title: Text('Spend'),
+          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.speaker_notes),
+//            title: Text('News'),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.swap_horizontal_circle),
+//            title: Text('Exchange'),
+//          ),
+        ],
       ),
+//      floatingActionButton: FloatingActionButton(
+//        onPressed: (){},
+//        backgroundColor: Colors.deepPurple.shade200,
+//        child: Icon(Icons.fingerprint),
+//      ),
     );
   }
 }
