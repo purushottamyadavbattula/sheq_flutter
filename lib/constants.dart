@@ -8,6 +8,13 @@ const klightYellow = Color(0xFFF8FAC4);
 const kpastelBlue = Color(0xFFA7C6D4);
 const kdarkBeige = Color(0xFF8A5749);
 const klightBeige = Color(0xFFE4BDB5);
+const kSheqPurple = Color(0xFF802058);
+const kEggplant = Color(0xFF210E22);
+const kSangria = Color(0xFF320A1B);
+const kPlum = Color(0xFF401125);
+const kIris = Color(0xFF9866C5);
+const kLavender = Color(0xFFE39FF6);
+
 
 
 const kTextInputDecor = InputDecoration(

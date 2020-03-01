@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
-//import 'package:sheq_flutter/constants.dart';
+import 'package:sheq_flutter/components/reusable_card.dart';
+import 'package:sheq_flutter/components/icon_content.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sheq_flutter/constants.dart';
 
 class MainMenuScreen extends StatelessWidget {
   static const String id = 'main_menu_screen';
@@ -8,62 +11,90 @@ class MainMenuScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.purple.shade700,
-        title: Image.asset('images/title-logo.png'),
+        backgroundColor: kEggplant,
+        title: Image.asset(
+          'images/title-logo.png',
+          width: 80,
+          height: 100,
+        ),
       ),
-      body: Container(
-        color: Colors.purple.shade100,
-        child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      body: Container(color: kEggplant,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            Column(children: <Widget>[
-              Icon(Icons.accessibility_new),
-              Text('Friends'),
-            ],
-            ),
-            Column(children: <Widget>[
-              Icon(Icons.touch_app),
-              Text('Invest'),
+            Row(crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+              ReusableCard(
+                  cardChild: IconContent(label:'ADD FUNDS', icon: FontAwesomeIcons.moneyBillAlt,),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'SEND RECEIVE', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'TERMS & TRANSFER', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'COINSWAP EXCHANGE',icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
             ],),
-            Column(children: <Widget>[
-              Icon(Icons.shopping_cart),
-              Text('Spend'),
+            Row(children: <Widget>[
+              ReusableCard(
+                  cardChild: IconContent(icon: FontAwesomeIcons.ethereum, label: 'ETHEREUM',),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'PROFILE HOME',icon: FontAwesomeIcons.addressCard),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'PRIVATE CALLING', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'POST NEW', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
             ],),
-            Column(children: <Widget>[
-              Icon(Icons.speaker_notes),
-              Text('News'),
+            Row(children: <Widget>[
+              ReusableCard(
+                  cardChild: IconContent(label:'SHEQ SHOP', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'SHEQ SEARCH', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'SHEQ HELPBOT', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
+              ReusableCard(
+                  cardChild: IconContent(label:'GLOBAL SETTINGS', icon: FontAwesomeIcons.exchangeAlt),
+                  onPress: (){}),
             ],),
-            Column(children: <Widget>[
-              Icon(Icons.swap_horizontal_circle),
-              Text('Exchange'),
-            ],
-            ),
+            SizedBox(height: 30,),
+//            Image.asset('images/pink_graph2.jpg'),
           ],
         ),
       ),
+
+      //TODO: 1) make the BottomNavigationBar show the 5 icons instead of 3
       bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.purple,
+        backgroundColor: Colors.white,
         items: const <BottomNavigationBarItem> [
           BottomNavigationBarItem(
-            icon: Icon(Icons.accessibility_new),
-            title: Text('Friends'),
+            icon: Icon(Icons.group, color: Colors.deepPurple),
+            title: Text('Friends', style: TextStyle(color: Colors.deepPurple),),
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.touch_app),
-            title: Text('Invest'),
+            icon: Icon(Icons.touch_app, color: Colors.deepPurple),
+            title: Text('Invest', style: TextStyle(color: Colors.deepPurple),),
           ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.shopping_cart, color: Colors.deepPurple),
+//            title: Text('Spend', style: TextStyle(color: Colors.deepPurple),),
+//          ),
+//          BottomNavigationBarItem(
+//            icon: Icon(Icons.speaker_notes, color: Colors.deepPurple),
+//            title: Text('News',style: TextStyle(color: Colors.deepPurple),),
+//          ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_cart),
-            title: Text('Spend'),
+            icon: Icon(Icons.swap_horizontal_circle, color: Colors.deepPurple),
+            title: Text('Exchange',style: TextStyle(color: Colors.deepPurple),),
           ),
-//          BottomNavigationBarItem(
-//            icon: Icon(Icons.speaker_notes),
-//            title: Text('News'),
-//          ),
-//          BottomNavigationBarItem(
-//            icon: Icon(Icons.swap_horizontal_circle),
-//            title: Text('Exchange'),
-//          ),
         ],
       ),
 //      floatingActionButton: FloatingActionButton(
