@@ -5,8 +5,11 @@ import 'package:sheq_flutter/screens/main_menu_screen.dart';
 import 'package:sheq_flutter/screens/welcome_screen.dart';
 import 'package:sheq_flutter/screens/menu_screen.dart';
 import 'package:sheq_flutter/screens/menu_thrower_screen.dart';
+import 'package:sheq_flutter/screens/profileScreen.dart';
 
-
+import 'screens/menu_thrower_screen.dart';
+import 'screens/menu_thrower_screen.dart';
+import 'screens/menu_thrower_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -14,13 +17,14 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp (
-      initialRoute: MainMenuScreen.id,
+    return MaterialApp(
+      initialRoute: MenuThrower.id,
       routes: {
-        WelcomeScreen.id: (context) => WelcomeScreen(),
-        MainMenuScreen.id: (context) => MainMenuScreen(),
+        //WelcomeScreen.id: (context) => WelcomeScreen(),
+        //MainMenuScreen.id: (context) => MainMenuScreen(),
         MenuThrower.id: (context) => MenuThrower(),
-        MenuScreen.id: (context) => MenuScreen()
+        MenuScreen.id: (context) => MenuScreen(),
+        ProfileScreen.id: (context) => ProfileScreen(),
 //        RegistrationScreen.id: (context) =>RegistrationScreen(),
 //        ChatScreen.id: (context) => ChatScreen(),
 //        LoginScreen.id: (context) => LoginScreen(),
@@ -35,4 +39,3 @@ class MyApp extends StatelessWidget {
 //TODO: 2) navigation between screens, time to start building it
 //TODO: 3) Authentication: EthereumAddress authentication using web3 dart package >> start trying to make it work
 //TODO: 4) API to get prices of $DAI and $ETH >> can we connect to Uniswap ? https://uniswap.exchange/swap
-

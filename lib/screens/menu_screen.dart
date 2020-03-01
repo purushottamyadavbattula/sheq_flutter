@@ -43,18 +43,24 @@ class MenuScreen extends StatelessWidget {
           body: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.stretch,
+            verticalDirection: VerticalDirection.up,
             children: <Widget>[
               Expanded(
                 flex: 1,
                 child: Container(
-                  color: kEggplant,
-                  child: IconButton(
-                    onPressed: () => {Navigator.pop(context)},
-                    icon: Icon(
-                      Icons.arrow_back,
-                      color: Colors.white,
-                      size: 40,
-                    ),
+                  color: kPlum,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: <Widget>[
+                      IconButton(
+                        onPressed: () => {Navigator.pop(context)},
+                        icon: Icon(
+                          Icons.arrow_back,
+                          color: Colors.white,
+                          size: 40,
+                        ),
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -73,7 +79,8 @@ class MenuScreen extends StatelessWidget {
                     ),
                     MenuItem(Icons.search, "SEARCH", () => {}),
                     line(),
-                    MenuItem(Icons.perm_identity, "PROFILE", () => {}),
+                    MenuItem(Icons.perm_identity, "PROFILE",
+                        () => {Navigator.pushNamed(context, 'profile')}),
                     MenuItem(Icons.show_chart, "PORTFOLIO", () => {}),
                     MenuItem(Icons.account_balance_wallet, "WALLETS", () => {}),
                     MenuItem(Icons.shopping_cart, "SHEQ SHOP", () => {}),
