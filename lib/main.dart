@@ -5,7 +5,7 @@ import 'package:sheq_flutter/screens/main_menu_screen.dart';
 import 'package:sheq_flutter/screens/welcome_screen.dart';
 import 'package:sheq_flutter/screens/menu_screen.dart';
 import 'package:sheq_flutter/screens/menu_thrower_screen.dart';
-import 'package:sheq_flutter/screens/profileScreen.dart';
+import 'package:sheq_flutter/screens/profileShower.dart';
 
 import 'screens/menu_thrower_screen.dart';
 import 'screens/menu_thrower_screen.dart';
